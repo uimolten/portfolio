@@ -69,48 +69,38 @@ interface PortfolioSectionProps {
 
 const PortfolioSection = ({ onProjectClick }: PortfolioSectionProps) => {
   return (
-    <section id="portfolio" className="py-20 sm:py-24 bg-card/20">
-      <div className="container mx-auto">
-        <AnimatedContent>
-          <h2 className="text-3xl font-bold font-headline text-center sm:text-4xl">My Portfolio</h2>
-          <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-            A selection of my best work. Click on any project to see more details.
-          </p>
+    <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project, index) => (
+        <AnimatedContent key={project.id} className="transition-all" style={{transitionDelay: `${index * 100}ms`}}>
+          <Card
+            onClick={() => onProjectClick(project)}
+            className="overflow-hidden cursor-pointer group transition-all duration-300 bg-card border-border hover:border-primary/50 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10"
+          >
+            <CardContent className="p-0">
+              <div className="relative h-60 w-full overflow-hidden">
+                <Image
+                  src={project.imageUrl}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  data-ai-hint={project.category}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold font-headline">{project.title}</h3>
+                <p className="mt-2 text-muted-foreground h-10">{project.description}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <Badge key={tag} variant="secondary">{tag}</Badge>
+                  ))}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </AnimatedContent>
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <AnimatedContent key={project.id} className="transition-all" style={{transitionDelay: `${index * 100}ms`}}>
-              <Card
-                onClick={() => onProjectClick(project)}
-                className="overflow-hidden cursor-pointer group transition-all duration-300 bg-card border-border hover:border-primary/50 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10"
-              >
-                <CardContent className="p-0">
-                  <div className="relative h-60 w-full overflow-hidden">
-                    <Image
-                      src={project.imageUrl}
-                      alt={project.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      data-ai-hint={project.category}
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold font-headline">{project.title}</h3>
-                    <p className="mt-2 text-muted-foreground h-10">{project.description}</p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary">{tag}</Badge>
-                      ))}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedContent>
-          ))}
-        </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 };
 export default PortfolioSection;

@@ -97,7 +97,7 @@ const ContactSection = () => {
                                     </FormItem>
                                 )}
                             />
-                            <Button type="submit" size="lg" className="w-full transition-all duration-300 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-[0_0_20px_0px_hsl(var(--primary)/0.5)]">
+                            <Button type="submit" size="lg" className="w-full transition-all duration-300 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-glow-primary">
                                 Send Message
                             </Button>
                         </form>

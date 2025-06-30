@@ -66,4 +66,8 @@
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
   }
+  .dark body {
+    background-image: radial-gradient(hsl(var(--muted) / 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
 }

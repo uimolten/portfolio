@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import CursorGlow from '@/components/cursor-glow';
 
 export const metadata: Metadata = {
   title: 'UIMolten Portfolio',
@@ -20,6 +21,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Outfit:wght@700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
+        <CursorGlow />
         {children}
         <Toaster />
       </body>

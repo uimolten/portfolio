@@ -51,55 +51,49 @@ const pricingTiers = [
 
 const PricingSection = () => {
     const scrollTo = (id: string) => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        if (window.location.pathname !== '/') {
+            window.location.href = `/#${id}`;
+        } else {
+            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        }
     };
 
     return (
-        <section id="pricing" className="py-20 sm:py-24">
-            <div className="container mx-auto">
-                <AnimatedContent>
-                    <h2 className="text-3xl font-bold font-headline text-center sm:text-4xl">Pricing & Packages</h2>
-                    <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-                        Choose the perfect package for your project's needs. All prices are estimates and can be customized.
-                    </p>
+        <div className="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-3 items-start">
+            {pricingTiers.map((tier, index) => (
+                <AnimatedContent key={tier.name} className="h-full" style={{transitionDelay: `${index * 100}ms`}}>
+                    <Card className={cn(
+                        "flex flex-col h-full",
+                        tier.highlighted && "border-2 border-primary shadow-glow-primary"
+                    )}>
+                        <CardHeader className="text-center">
+                            <CardTitle className="text-2xl font-headline">{tier.name}</CardTitle>
+                            <p className="text-4xl font-bold text-primary pt-4">{tier.price}</p>
+                            <CardDescription className="pt-2">{tier.description}</CardDescription>
+                        </CardHeader>
+                        <CardContent className="flex-grow">
+                            <ul className="space-y-4">
+                                {tier.features.map((feature) => (
+                                    <li key={feature} className="flex items-center gap-3">
+                                        <Check className="h-5 w-5 text-primary" />
+                                        <span className="text-muted-foreground">{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </CardContent>
+                        <CardFooter>
+                            <Button
+                                size="lg"
+                                className={cn("w-full transition-all duration-300 hover:scale-105", tier.highlighted ? "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-glow-primary" : "bg-primary/10 text-primary hover:bg-primary/20")}
+                                onClick={() => scrollTo('contact')}
+                            >
+                                {tier.cta}
+                            </Button>
+                        </CardFooter>
+                    </Card>
                 </AnimatedContent>
-                <div className="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-3 items-start">
-                    {pricingTiers.map((tier, index) => (
-                        <AnimatedContent key={tier.name} className="h-full" style={{transitionDelay: `${index * 100}ms`}}>
-                            <Card className={cn(
-                                "flex flex-col h-full",
-                                tier.highlighted && "border-2 border-primary shadow-2xl shadow-primary/10"
-                            )}>
-                                <CardHeader className="text-center">
-                                    <CardTitle className="text-2xl font-headline">{tier.name}</CardTitle>
-                                    <p className="text-4xl font-bold text-primary pt-4">{tier.price}</p>
-                                    <CardDescription className="pt-2">{tier.description}</CardDescription>
-                                </CardHeader>
-                                <CardContent className="flex-grow">
-                                    <ul className="space-y-4">
-                                        {tier.features.map((feature) => (
-                                            <li key={feature} className="flex items-center gap-3">
-                                                <Check className="h-5 w-5 text-primary" />
-                                                <span className="text-muted-foreground">{feature}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </CardContent>
-                                <CardFooter>
-                                    <Button
-                                        size="lg"
-                                        className={cn("w-full transition-all duration-300 hover:scale-105", tier.highlighted ? "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_20px_0px_hsl(var(--primary)/0.5)]" : "bg-primary/10 text-primary hover:bg-primary/20")}
-                                        onClick={() => scrollTo('contact')}
-                                    >
-                                        {tier.cta}
-                                    </Button>
-                                </CardFooter>
-                            </Card>
-                        </AnimatedContent>
-                    ))}
-                </div>
-            </div>
-        </section>
+            ))}
+        </div>
     );
 };
 
