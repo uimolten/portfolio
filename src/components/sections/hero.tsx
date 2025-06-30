@@ -10,6 +10,7 @@ const HeroSection = () => {
   };
   return (
     <section id="hero" className="py-24 sm:py-32 md:py-40 relative overflow-hidden">
+        <div className="hero-rain-bg"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg aspect-square bg-primary/10 rounded-full blur-3xl" />
         <AnimatedContent>
             <div className="container mx-auto text-center relative z-10">
