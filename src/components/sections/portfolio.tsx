@@ -10,9 +10,9 @@ const projects: Project[] = [
   {
     id: 7,
     title: "Heist Game Settings",
-    category: "modern ui",
-    description: "A sleek settings interface for a modern action game.",
-    longDescription: "This project involved designing a clear and stylish settings menu for an action/heist game. The focus was on readability and ease of use, with toggle switches for various in-game options like brightness, shadows, and music. The clean lines and teal accents provide a modern, tech-focused feel.",
+    category: "game settings",
+    description: "A sleek settings interface with brightness, shadows, and audio controls.",
+    longDescription: "This project involved designing a clear and stylish settings menu for an action/heist game. The focus was on readability and ease of use, with toggle switches for various in-game options like brightness, global shadows, mute ambience, and riot/heist music. The clean lines and teal accents provide a modern, tech-focused feel.",
     imageUrl: "https://placehold.co/600x400.png",
     tags: ["Roblox", "UI/UX", "Modern", "Settings"],
   },

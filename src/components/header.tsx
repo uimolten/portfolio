@@ -2,7 +2,6 @@
 import { Twitter, Dribbble } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import Logo from './logo';
 
 const Header = () => {
   const scrollTo = (id: string) => {
@@ -21,7 +20,6 @@ const Header = () => {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2 text-xl font-headline font-bold text-primary">
-            <Logo className="h-7 w-7" />
             UIMolten
           </Link>
         </div>
