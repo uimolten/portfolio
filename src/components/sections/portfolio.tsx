@@ -8,6 +8,15 @@ import type { Project } from "@/types";
 
 const projects: Project[] = [
   {
+    id: 7,
+    title: "Heist Game Settings",
+    category: "modern ui",
+    description: "A sleek settings interface for a modern action game.",
+    longDescription: "This project involved designing a clear and stylish settings menu for an action/heist game. The focus was on readability and ease of use, with toggle switches for various in-game options like brightness, shadows, and music. The clean lines and teal accents provide a modern, tech-focused feel.",
+    imageUrl: "https://placehold.co/600x400.png",
+    tags: ["Roblox", "UI/UX", "Modern", "Settings"],
+  },
+  {
     id: 1,
     title: "Project Phantom",
     category: "sci-fi ui",
