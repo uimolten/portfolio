@@ -13,7 +13,7 @@ const projects: Project[] = [
     category: "game settings",
     description: "A sleek settings interface with brightness, shadows, and audio controls.",
     longDescription: "This project involved designing a clear and stylish settings menu for an action/heist game. The focus was on readability and ease of use, with toggle switches for various in-game options like brightness, global shadows, mute ambience, and riot/heist music. The clean lines and teal accents provide a modern, tech-focused feel.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/heist-game-settings.png",
     tags: ["Roblox", "UI/UX", "Modern", "Settings"],
   },
   {
@@ -22,7 +22,7 @@ const projects: Project[] = [
     category: "sci-fi ui",
     description: "A futuristic UI for a sci-fi adventure game.",
     longDescription: "Project Phantom was a commission for a large-scale sci-fi RPG. The goal was to create an immersive, futuristic interface that felt both advanced and intuitive. We used holographic elements and a clean, minimalist design to achieve this.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/project-phantom.png",
     tags: ["Roblox", "UI/UX", "Sci-Fi", "Minimalist"],
   },
   {
@@ -31,7 +31,7 @@ const projects: Project[] = [
     category: "fantasy ui",
     description: "Colorful and playful UI for a fantasy simulator.",
     longDescription: "For Candy Kingdom, the client wanted a UI that was as vibrant and engaging as the game world itself. We used bright colors, custom iconography, and playful animations to create a user experience that kids love.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/candy-kingdom.png",
     tags: ["Roblox", "UI", "Fantasy", "Colorful"],
   },
   {
@@ -40,7 +40,7 @@ const projects: Project[] = [
     category: "racing game ui",
     description: "Sleek, high-octane UI for a competitive racing game.",
     longDescription: "The UI for Velocity Racing needed to be fast, readable, and stylish. We focused on clear typography and dynamic elements that convey speed and competition, ensuring crucial information is available at a glance during high-speed races.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/velocity-racing.png",
     tags: ["Roblox", "UI/UX", "Racing", "Modern"],
   },
   {
@@ -49,7 +49,7 @@ const projects: Project[] = [
     category: "simulator game ui",
     description: "A charming and intuitive interface for a pet collection game.",
     longDescription: "Petopia's UI design is all about being friendly and easy to navigate for a younger audience. We created a soft, rounded design language with clear icons and a simple layout to manage pet collections, shops, and game worlds.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/petopia.png",
     tags: ["Roblox", "UI", "Simulator", "Cute"],
   },
   {
@@ -58,7 +58,7 @@ const projects: Project[] = [
     category: "survival game ui",
     description: "A gritty, immersive UI for a post-apocalyptic survival game.",
     longDescription: "This project required a dark and gritty aesthetic to match the game's atmosphere. We designed a diegetic UI that feels part of the world, using distressed textures and a minimal color palette to enhance immersion without sacrificing usability.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/zombie-apocalypse.png",
     tags: ["Roblox", "UI/UX", "Survival", "Immersive"],
   },
   {
@@ -67,7 +67,7 @@ const projects: Project[] = [
     category: "roleplay game ui",
     description: "Elegant and chic UI for a fashion-focused roleplaying game.",
     longDescription: "Fashion Stars demanded a sophisticated and stylish interface. We took inspiration from modern fashion magazines and luxury brands to create a clean, elegant UI for character customization, shopping, and social interaction.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/fashion-stars.png",
     tags: ["Roblox", "UI", "Roleplay", "Elegant"],
   },
 ];
