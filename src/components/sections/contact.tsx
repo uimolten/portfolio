@@ -6,16 +6,16 @@ import { Twitter, MessageSquare, Gamepad2, ArrowUpRight } from 'lucide-react';
 
 const contactLinks = [
   {
-    href: "#", // TODO: Replace with your Discord profile/server link
+    href: null,
     icon: <MessageSquare className="h-10 w-10 text-primary" />,
     title: "Discord",
-    handle: "UIMolten"
+    handle: "moltennn."
   },
   {
-    href: "#", // TODO: Replace with your Twitter profile link
+    href: "https://x.com/moltennn_",
     icon: <Twitter className="h-10 w-10 text-primary" />,
     title: "Twitter",
-    handle: "@UIMolten"
+    handle: "@moltennn_"
   },
   {
     href: "#", // TODO: Replace with your Roblox Talent Hub profile link
@@ -38,18 +38,30 @@ const ContactSection = () => {
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
                     {contactLinks.map((link, index) => (
                         <AnimatedContent key={index} className="h-full" style={{transitionDelay: `${index * 100}ms`}}>
-                            <a href={link.href} target="_blank" rel="noopener noreferrer" className="block h-full">
-                                <Card className="p-8 h-full flex flex-col items-center justify-center text-center group transition-all duration-300 bg-card border-border hover:border-primary/50 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10">
-                                    <div className="mb-4 transition-transform duration-300 group-hover:scale-110">
+                             {link.href ? (
+                                <a href={link.href} target="_blank" rel="noopener noreferrer" className="block h-full">
+                                    <Card className="p-8 h-full flex flex-col items-center justify-center text-center group transition-all duration-300 bg-card border-border hover:border-primary/50 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10">
+                                        <div className="mb-4 transition-transform duration-300 group-hover:scale-110">
+                                            {link.icon}
+                                        </div>
+                                        <h3 className="text-2xl font-bold font-headline">{link.title}</h3>
+                                        <p className="mt-2 text-muted-foreground flex items-center gap-2">
+                                            {link.handle}
+                                            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                                        </p>
+                                    </Card>
+                                </a>
+                            ) : (
+                                <Card className="p-8 h-full flex flex-col items-center justify-center text-center bg-card border-border">
+                                    <div className="mb-4">
                                         {link.icon}
                                     </div>
                                     <h3 className="text-2xl font-bold font-headline">{link.title}</h3>
                                     <p className="mt-2 text-muted-foreground flex items-center gap-2">
                                         {link.handle}
-                                        <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                                     </p>
                                 </Card>
-                            </a>
+                            )}
                         </AnimatedContent>
                     ))}
                 </div>
