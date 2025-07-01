@@ -11,10 +11,6 @@ const faqs = [
         answer: "The timeline depends on the complexity of the project. A basic package might take 1-2 weeks, while a premium, full-game UI overhaul could take 4-6 weeks. I'll provide a more accurate estimate after our initial discussion."
     },
     {
-        question: "What tools do you use for UI design?",
-        answer: "I primarily use Figma for designing and prototyping. For in-game implementation, I am proficient with Roblox Studio and can provide you with fully scaled and scripted UI elements if required."
-    },
-    {
         question: "How do I contact you?",
         answer: 'The best way is to reach out on Discord. Alternatively, you can use the links provided on the <a href="/#contact" class="text-primary hover:underline font-semibold">contact section</a> below.'
     }
@@ -35,10 +31,9 @@ const FaqSection = () => {
                         {faqs.map((faq, index) => (
                             <AccordionItem key={index} value={`item-${index}`}>
                                 <AccordionTrigger className="text-left text-lg hover:no-underline">{faq.question}</AccordionTrigger>
-                                <AccordionContent 
-                                    className="text-base text-muted-foreground"
-                                    dangerouslySetInnerHTML={{ __html: faq.answer }}
-                                />
+                                <AccordionContent className="text-base text-muted-foreground">
+                                    <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                                </AccordionContent>
                             </AccordionItem>
                         ))}
                     </Accordion>
