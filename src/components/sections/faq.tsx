@@ -15,12 +15,8 @@ const faqs = [
         answer: "I primarily use Figma for designing and prototyping. For in-game implementation, I am proficient with Roblox Studio and can provide you with fully scaled and scripted UI elements if required."
     },
     {
-        question: "Can you also script the UI in Roblox?",
-        answer: "Yes, I offer UI scripting as part of my premium packages or as an add-on service. This includes making the UI fully functional, responsive, and animated within Roblox Studio."
-    },
-    {
-        question: "What are your payment terms?",
-        answer: "I typically require a 50% upfront payment to begin work, with the remaining 50% due upon completion and your final approval. I accept payment through various methods, which we can discuss."
+        question: "How do I contact you?",
+        answer: 'The best way is to reach out on Discord. Alternatively, you can use the links provided on the <a href="/#contact" class="text-primary hover:underline font-semibold">contact section</a> below.'
     }
 ]
 
@@ -39,9 +35,10 @@ const FaqSection = () => {
                         {faqs.map((faq, index) => (
                             <AccordionItem key={index} value={`item-${index}`}>
                                 <AccordionTrigger className="text-left text-lg hover:no-underline">{faq.question}</AccordionTrigger>
-                                <AccordionContent className="text-base text-muted-foreground">
-                                    {faq.answer}
-                                </AccordionContent>
+                                <AccordionContent 
+                                    className="text-base text-muted-foreground"
+                                    dangerouslySetInnerHTML={{ __html: faq.answer }}
+                                />
                             </AccordionItem>
                         ))}
                     </Accordion>

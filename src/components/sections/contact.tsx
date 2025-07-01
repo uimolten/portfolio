@@ -1,108 +1,58 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
 import AnimatedContent from "@/components/animated-content";
+import { Card } from "@/components/ui/card";
+import { Twitter, MessageSquare, Gamepad2, ArrowUpRight } from 'lucide-react';
 
-const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters."),
-  email: z.string().email("Please enter a valid email address."),
-  subject: z.string().min(5, "Subject must be at least 5 characters."),
-  message: z.string().min(10, "Message must be at least 10 characters."),
-});
+const contactLinks = [
+  {
+    href: "#", // TODO: Replace with your Discord profile/server link
+    icon: <MessageSquare className="h-10 w-10 text-primary" />,
+    title: "Discord",
+    handle: "UIMolten"
+  },
+  {
+    href: "#", // TODO: Replace with your Twitter profile link
+    icon: <Twitter className="h-10 w-10 text-primary" />,
+    title: "Twitter",
+    handle: "@UIMolten"
+  },
+  {
+    href: "#", // TODO: Replace with your Roblox Talent Hub profile link
+    icon: <Gamepad2 className="h-10 w-10 text-primary" />,
+    title: "Talent Hub",
+    handle: "View My Profile"
+  }
+];
 
 const ContactSection = () => {
-    const { toast } = useToast();
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
-        defaultValues: { name: "", email: "", subject: "", message: "" },
-    });
-
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values);
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for reaching out. I'll get back to you shortly.",
-        });
-        form.reset();
-    }
-
     return (
         <section id="contact" className="py-20 sm:py-24">
             <div className="container mx-auto">
                 <AnimatedContent>
                     <h2 className="text-3xl font-bold font-headline text-center sm:text-4xl">Get In Touch</h2>
                     <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-                        Have a project in mind or just want to say hi? Fill out the form below and I'll get back to you as soon as possible.
+                        I'm always open to discussing new projects. The best way to reach me is through one of the platforms below.
                     </p>
                 </AnimatedContent>
-                <AnimatedContent className="mt-12 max-w-xl mx-auto">
-                    <Form {...form}>
-                        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                            <FormField
-                                control={form.control}
-                                name="name"
-                                render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>Name</FormLabel>
-                                        <FormControl>
-                                            <Input placeholder="Your Name" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
-                            <FormField
-                                control={form.control}
-                                name="email"
-                                render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>Email</FormLabel>
-                                        <FormControl>
-                                            <Input placeholder="your.email@example.com" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
-                            <FormField
-                                control={form.control}
-                                name="subject"
-                                render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>Subject</FormLabel>
-                                        <FormControl>
-                                            <Input placeholder="Regarding a new project" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
-                            <FormField
-                                control={form.control}
-                                name="message"
-                                render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>Message</FormLabel>
-                                        <FormControl>
-                                            <Textarea placeholder="Tell me more about your project..." className="min-h-[150px]" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
-                            <Button type="submit" size="lg" className="w-full transition-all duration-300 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-glow-primary">
-                                Send Message
-                            </Button>
-                        </form>
-                    </Form>
-                </AnimatedContent>
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {contactLinks.map((link, index) => (
+                        <AnimatedContent key={index} className="h-full" style={{transitionDelay: `${index * 100}ms`}}>
+                            <a href={link.href} target="_blank" rel="noopener noreferrer" className="block h-full">
+                                <Card className="p-8 h-full flex flex-col items-center justify-center text-center group transition-all duration-300 bg-card border-border hover:border-primary/50 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10">
+                                    <div className="mb-4 transition-transform duration-300 group-hover:scale-110">
+                                        {link.icon}
+                                    </div>
+                                    <h3 className="text-2xl font-bold font-headline">{link.title}</h3>
+                                    <p className="mt-2 text-muted-foreground flex items-center gap-2">
+                                        {link.handle}
+                                        <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                                    </p>
+                                </Card>
+                            </a>
+                        </AnimatedContent>
+                    ))}
+                </div>
             </div>
         </section>
     );
