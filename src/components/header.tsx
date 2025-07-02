@@ -4,6 +4,7 @@ import { Twitter, Dribbble, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import Link from 'next/link';
+import Logo from './logo';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,8 +29,8 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center">
-          <Link href="/" className="flex items-center gap-2 text-xl font-headline font-bold text-primary">
-            UIMolten
+          <Link href="/" className="flex items-center gap-2">
+            <Logo className="h-9 w-auto" />
           </Link>
         </div>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -41,7 +42,7 @@ const Header = () => {
             {/* Desktop Buttons */}
             <div className="hidden md:flex items-center gap-2">
                 <Button variant="ghost" size="icon" asChild>
-                    <a href="#" aria-label="Twitter" className="hover:text-primary"><Twitter className="h-5 w-5" /></a>
+                    <a href="https://x.com/moltennn_" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-primary"><Twitter className="h-5 w-5" /></a>
                 </Button>
                 <Button variant="ghost" size="icon" asChild>
                     <a href="#" aria-label="Dribbble" className="hover:text-primary"><Dribbble className="h-5 w-5" /></a>
@@ -61,7 +62,11 @@ const Header = () => {
                     </SheetTrigger>
                     <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                         <SheetHeader>
-                           <SheetTitle className="text-left text-primary text-2xl font-headline">UIMolten</SheetTitle>
+                           <SheetTitle>
+                                <Link href="/" onClick={handleLinkClick} className="flex items-center">
+                                    <Logo className="h-9 w-auto" />
+                                </Link>
+                           </SheetTitle>
                         </SheetHeader>
                         <nav className="mt-8 flex flex-col space-y-6">
                             <Link href="/portfolio" onClick={handleLinkClick} className="text-lg font-medium transition-colors hover:text-primary">Portfolio</Link>
@@ -71,7 +76,7 @@ const Header = () => {
                               Contact
                             </Button>
                             <div className="flex items-center justify-start gap-4 border-t border-border/40 pt-6">
-                                 <a href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
+                                 <a href="https://x.com/moltennn_" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
                                     <Twitter className="h-6 w-6" />
                                 </a>
                                 <a href="#" aria-label="Dribbble" className="text-muted-foreground hover:text-primary transition-colors">

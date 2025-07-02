@@ -4,9 +4,48 @@ import { Toaster } from "@/components/ui/toaster";
 import CursorGlow from '@/components/cursor-glow';
 
 export const metadata: Metadata = {
-  title: 'UIMolten Portfolio',
-  description: 'UI/UX Commissions by UIMolten',
+  title: {
+    default: "UIMolten | Roblox UI/UX Designer",
+    template: `%s | UIMolten`,
+  },
+  description: "Expert Roblox UI/UX designer moltennn, crafting modern, intuitive, and high-quality digital experiences. Specializing in commissions for simulator, combat, and roleplay games.",
+  keywords: [
+    "Roblox UI",
+    "Roblox UX",
+    "UI Designer",
+    "UX Designer",
+    "Roblox Developer",
+    "UIMolten",
+    "moltennn",
+    "Game UI",
+    "Commissions",
+  ],
+  authors: [
+    {
+      name: "moltennn",
+      url: "https://x.com/moltennn_",
+    },
+  ],
+  creator: "moltennn",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    title: "UIMolten | Roblox UI/UX Designer",
+    description: "Expert Roblox UI/UX designer moltennn, crafting modern, intuitive, and high-quality digital experiences.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UIMolten | Roblox UI/UX Designer",
+    description: "Expert Roblox UI/UX designer moltennn, crafting modern, intuitive, and high-quality digital experiences.",
+    creator: "@moltennn_",
+  },
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
+
 
 export default function RootLayout({
   children,
