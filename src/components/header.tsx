@@ -31,6 +31,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
             <Logo className="h-9 w-auto" />
+            <span className="font-headline text-xl font-bold">UIMolten</span>
           </Link>
         </div>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -63,8 +64,9 @@ const Header = () => {
                     <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                         <SheetHeader>
                            <SheetTitle>
-                                <Link href="/" onClick={handleLinkClick} className="flex items-center">
+                                <Link href="/" onClick={handleLinkClick} className="flex items-center gap-2">
                                     <Logo className="h-9 w-auto" />
+                                    <span className="font-headline text-xl font-bold">UIMolten</span>
                                 </Link>
                            </SheetTitle>
                         </SheetHeader>
