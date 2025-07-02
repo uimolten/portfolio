@@ -2,7 +2,7 @@
 
 import AnimatedContent from "@/components/animated-content";
 import { Card } from "@/components/ui/card";
-import { Twitter, MessageSquare, Gamepad2, ArrowUpRight } from 'lucide-react';
+import { Twitter, MessageSquare, ArrowUpRight } from 'lucide-react';
 
 const contactLinks = [
   {
@@ -16,12 +16,6 @@ const contactLinks = [
     icon: <Twitter className="h-10 w-10 text-primary" />,
     title: "Twitter",
     handle: "@moltennn_"
-  },
-  {
-    href: "#", // TODO: Replace with your Roblox Talent Hub profile link
-    icon: <Gamepad2 className="h-10 w-10 text-primary" />,
-    title: "Talent Hub",
-    handle: "View My Profile"
   }
 ];
 
@@ -35,7 +29,7 @@ const ContactSection = () => {
                         I'm always open to discussing new projects. The best way to reach me is through one of the platforms below.
                     </p>
                 </AnimatedContent>
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
                     {contactLinks.map((link, index) => (
                         <AnimatedContent key={index} className="h-full" style={{transitionDelay: `${index * 100}ms`}}>
                              {link.href ? (

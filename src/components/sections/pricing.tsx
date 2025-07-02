@@ -9,42 +9,39 @@ import { cn } from '@/lib/utils';
 const pricingTiers = [
     {
         name: "Basic",
-        price: "$150",
+        price: "$35",
         description: "Perfect for simple UI needs and small projects.",
         features: [
             "Up to 5 unique UI frames",
-            "Custom icon design (basic set)",
-            "Mobile & Desktop compatible",
-            "2 rounds of revisions",
+            "Up to 10 miscellaneous items",
+            "Imported Into Roblox Studio",
         ],
         cta: "Get Started",
         highlighted: false,
     },
     {
         name: "Standard",
-        price: "$350",
+        price: "$100",
         description: "The most popular choice for most game projects.",
         features: [
-            "Up to 15 unique UI frames",
-            "Custom icon design (full set)",
+            "Up to 15 Unique UI Frames",
             "Full UI design system",
-            "Includes basic animations",
-            "4 rounds of revisions",
+            "Includes basic animations"
         ],
         cta: "Choose Standard",
-        highlighted: true,
+        highlighted: false,
     },
     {
         name: "Premium",
-        price: "$700+",
+        price: "Custom Quote",
         description: "Complete UI/UX overhaul for large-scale games.",
         features: [
             "Unlimited UI frames",
-            "Advanced animations & effects",
-            "Full implementation in Roblox Studio",
-            "Priority support & unlimited revisions",
+            "UI Animations & SFX",
+            "Priority support",
+            "Unlimited revisions",
         ],
-        cta: "Contact for Quote",
+        cta: "Book a Consultation",
         highlighted: false,
     }
 ];
