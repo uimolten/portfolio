@@ -95,7 +95,7 @@ const PortfolioSection = ({ onProjectClick }: PortfolioSectionProps) => {
             className="overflow-hidden cursor-pointer group transition-all duration-300 bg-card border-border hover:border-primary/50 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10"
           >
             <CardContent className="p-0">
-              <div className="relative h-60 w-full overflow-hidden">
+              <div className="relative aspect-video w-full overflow-hidden">
                 <Image
                   src={project.imageUrl}
                   alt={project.title}

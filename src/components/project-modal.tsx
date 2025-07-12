@@ -15,7 +15,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
     <Dialog open={true} onOpenChange={(isOpen) => !isOpen && onClose()}>
       <DialogContent className="max-w-3xl bg-background border-border p-8">
         <DialogHeader>
-          <div className="relative h-60 md:h-80 w-full rounded-lg overflow-hidden mb-6">
+          <div className="relative aspect-video w-full rounded-lg overflow-hidden mb-6">
              <Image src={project.imageUrl} alt={project.title} fill className="object-cover" data-ai-hint={project.category} />
           </div>
           <DialogTitle className="text-3xl font-headline">{project.title}</DialogTitle>

@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import CursorGlow from '@/components/cursor-glow';
+import { PageTransition } from '@/components/page-transition';
+
 
 export const metadata: Metadata = {
   title: {
@@ -61,7 +63,9 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <CursorGlow />
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
         <Toaster />
       </body>
     </html>
