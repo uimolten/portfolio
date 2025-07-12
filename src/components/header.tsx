@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { Twitter, Dribbble, Menu } from 'lucide-react';
+import { Twitter, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import Link from 'next/link';
@@ -45,9 +45,6 @@ const Header = () => {
                 <Button variant="ghost" size="icon" asChild>
                     <a href="https://x.com/moltennn_" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-primary"><Twitter className="h-5 w-5" /></a>
                 </Button>
-                <Button variant="ghost" size="icon" asChild>
-                    <a href="#" aria-label="Dribbble" className="hover:text-primary"><Dribbble className="h-5 w-5" /></a>
-                </Button>
                 <Button onClick={() => scrollTo('contact')} className="transition-all duration-300 bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-glow-primary">
                   Contact
                 </Button>
@@ -80,9 +77,6 @@ const Header = () => {
                             <div className="flex items-center justify-start gap-4 border-t border-border/40 pt-6">
                                  <a href="https://x.com/moltennn_" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
                                     <Twitter className="h-6 w-6" />
-                                </a>
-                                <a href="#" aria-label="Dribbble" className="text-muted-foreground hover:text-primary transition-colors">
-                                    <Dribbble className="h-6 w-6" />
                                 </a>
                             </div>
                         </nav>

@@ -8,6 +8,15 @@ import type { Project } from "@/types";
 
 const projects: Project[] = [
   {
+    id: 8,
+    title: "Cartoony Drinks Menu",
+    category: "cartoony menu",
+    description: "A vibrant and playful drinks menu UI for a restaraunt-style game.",
+    longDescription: "This UI features a fun, bubbly design with color and a clean layout, perfect for engaging players in a cafe or restaurant game. It includes categories for different drink types and detailed item descriptions with prices.",
+    imageUrl: "/drinks-menu-ui.png",
+    tags: ["Roblox", "UI/UX", "Cartoony", "Menu", "Simulator"],
+  },
+  {
     id: 7,
     title: "SWAT Game Settings",
     category: "game settings",
@@ -23,7 +32,7 @@ const projects: Project[] = [
     description: "A sleek, modern UI for an invite friend feature in a SWAT roleplay game.",
     longDescription: "A sleek, modern UI for an invite friend feature in a SWAT roleplay game, featuring ScrollingFrames when imported",
     imageUrl: "/zombie-apocalypse.png",
-    tags: ["Roblox", "UI/UX", "Modern", "Clearn"],
+    tags: ["Roblox", "UI/UX", "Modern", "Clean"],
   },
   {
     id: 1,

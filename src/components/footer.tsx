@@ -1,4 +1,4 @@
-import { Twitter, Dribbble, Github } from 'lucide-react';
+import { Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -12,12 +12,6 @@ const Footer = () => {
         <div className="flex gap-4 mt-4 md:mt-0">
           <a href="https://x.com/moltennn_" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
             <Twitter className="h-5 w-5" />
-          </a>
-          <a href="#" aria-label="Dribbble" className="text-muted-foreground hover:text-primary transition-colors">
-            <Dribbble className="h-5 w-5" />
-          </a>
-          <a href="#" aria-label="Github" className="text-muted-foreground hover:text-primary transition-colors">
-            <Github className="h-5 w-5" />
           </a>
         </div>
       </div>
