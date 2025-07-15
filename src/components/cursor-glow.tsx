@@ -21,7 +21,7 @@ const CursorGlow = () => {
     <div
       className="pointer-events-none fixed inset-0 z-30 transition-all duration-300 hidden md:block"
       style={{
-        background: `radial-gradient(400px at ${position.x}px ${position.y}px, hsla(var(--primary) / 0.2), transparent 80%)`,
+        background: `radial-gradient(150px at ${position.x}px ${position.y}px, hsla(var(--primary) / 0.25), transparent 80%)`,
       }}
     />
   );
