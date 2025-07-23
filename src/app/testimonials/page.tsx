@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -42,7 +44,10 @@ export default function TestimonialsPage() {
     if (window.location.pathname !== '/') {
         window.location.href = `/#${id}`;
     } else {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        const targetElement = document.getElementById(id);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
     }
   };
 
