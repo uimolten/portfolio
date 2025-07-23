@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import AnimatedContent from '@/components/animated-content';
 import Link from 'next/link';
+import DarkVeil from '../dark-veil';
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
@@ -10,7 +11,13 @@ const HeroSection = () => {
   };
   return (
     <section id="hero" className="py-24 sm:py-32 md:py-40 relative overflow-hidden">
-        <div className="hero-rain-bg"></div>
+        <DarkVeil
+          hueShift={-130}
+          noiseIntensity={0.03}
+          scanlineIntensity={0.05}
+          warpAmount={0.8}
+          speed={0.3}
+        />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg aspect-square bg-primary/10 rounded-full blur-3xl" />
         <AnimatedContent>
             <div className="container mx-auto text-center relative z-10">
