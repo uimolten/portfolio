@@ -12,31 +12,10 @@ import SpotlightCard from "@/components/spotlight-card";
 
 const testimonials: Testimonial[] = [
     {
-        quote: "UIMolten is an incredibly talented and professional UI designer. The quality of work is consistently top-tier, and the communication is excellent. I couldn't be happier with the results!",
-        client: "Synthverse",
-        projectUrl: "/portfolio"
-    },
-    {
-        quote: "Working with UIMolten was a breeze. They took my vision and turned it into a stunning, intuitive interface that has received nothing but positive feedback from our players.",
-        client: "Blade Productions",
-    },
-    {
-        quote: "The final designs exceeded all my expectations. The attention to detail and creative flair brought a new level of professionalism to our game. Highly recommended!",
-        client: "AeroGames",
-        projectUrl: "/portfolio"
-    },
-     {
-        quote: "Not only is the UI visually impressive, but it's also highly functional and optimized. The entire process was smooth, and they delivered exactly what was promised on time.",
-        client: "Dreamwell Studios"
-    },
-    {
-        quote: "An absolute pleasure to work with. They are receptive to feedback and are true collaborators in the creative process. The UI has significantly improved our player experience.",
-        client: "Impulse Interactive",
-    },
-    {
-        quote: "If you're looking for a UI designer who can deliver modern, clean, and engaging interfaces, look no further. Their work speaks for itself. 10/10 would commission again.",
-        client: "Nexus Entertainment"
+        quote: "Vouch, @Molten  really good UI designer delivered on time with fair prices and flexible schedule.",
+        client: "@Ovniman"
     }
+
 ];
 
 

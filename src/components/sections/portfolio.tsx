@@ -8,6 +8,33 @@ import type { Project } from "@/types";
 
 const projects: Project[] = [
   {
+    id: 11,
+    title: "Magic Origins - Skill Tree",
+    category: "RPG fantasy",
+    description: "An immersive skill tree interface for a fantasy RPG, featuring glowing, dynamic paths.",
+    longDescription: "This UI allows players to visualize and unlock new abilities through an interactive skill tree. The design uses vibrant, glowing lines and fantasy-themed icons to create an engaging progression system. It includes detailed descriptions for each node, costs, and a clear path for character development.",
+    imageUrl: "/magic-origins-skill-tree.png",
+    tags: ["Roblox", "UI/UX", "RPG", "Skill Tree", "Fantasy"],
+  },
+  {
+    id: 10,
+    title: "Awakening Gauge - Upgrade Panel",
+    category: "RPG UI",
+    description: "A sleek, detailed panel for item and skill upgrades in a fantasy game.",
+    longDescription: "This component provides players with all the necessary information for a skill upgrade. It features a detailed description, cost breakdown for multiple items, and a clear title, all presented in a clean, modern layout that fits seamlessly into a fantasy theme.",
+    imageUrl: "/magic-origins-awakening.png",
+    tags: ["Roblox", "UI", "RPG", "Modern", "Fantasy"],
+  },
+  {
+    id: 9,
+    title: "Magic Origins - Character Stats",
+    category: "character UI",
+    description: "A clean and informative character stats and evolution panel for an RPG.",
+    longDescription: "This UI element clearly displays essential player information, such as character name and origin points, along with an 'Auto-Evolve' option. The design is clean and unobtrusive, allowing for quick access to key stats while fitting into a larger, more complex interface.",
+    imageUrl: "/magic-origins-character.png",
+    tags: ["Roblox", "UI/UX", "RPG", "Character", "Minimal"],
+  },
+  {
     id: 8,
     title: "Cartoony Drinks Menu",
     category: "cartoony menu",
