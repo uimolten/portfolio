@@ -27,12 +27,12 @@ const projects: Project[] = [
   },
   {
     id: 9,
-    title: "Magic Origins - Character Stats",
-    category: "character UI",
-    description: "A clean and informative character stats and evolution panel for an RPG.",
-    longDescription: "This UI element clearly displays essential player information, such as character name and origin points, along with an 'Auto-Evolve' option. The design is clean and unobtrusive, allowing for quick access to key stats while fitting into a larger, more complex interface.",
-    imageUrl: "/magic-origins-character.png",
-    tags: ["Roblox", "UI/UX", "RPG", "Character", "Minimal"],
+    title: "Fantasy RPG - Inventory & Crafting",
+    category: "RPG inventory",
+    description: "A detailed inventory and crafting screen for a fantasy RPG, showing item details and required materials.",
+    longDescription: "This interface provides a comprehensive view of the player's inventory, separated into categories like 'Consumables' and 'Other Items'. When an item is selected, its details, description, and crafting requirements are displayed clearly on the right. The dark, thematic design with orange highlights maintains a consistent fantasy aesthetic.",
+    imageUrl: "/fantasy-rpg-inventory.png",
+    tags: ["Roblox", "UI/UX", "RPG", "Inventory", "Crafting"],
   },
   {
     id: 8,
