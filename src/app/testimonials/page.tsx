@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import type { Testimonial } from "@/types";
+import SpotlightCard from "@/components/spotlight-card";
 
 const testimonials: Testimonial[] = [
     {
@@ -71,21 +72,23 @@ export default function TestimonialsPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {testimonials.map((testimonial, index) => (
                          <AnimatedContent key={index} className="h-full" style={{transitionDelay: `${index * 100}ms`}}>
-                            <Card className="p-8 h-full flex flex-col justify-between text-left bg-card border-border transition-all duration-300 hover:border-primary/50 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary/10">
-                                <div>
-                                    <div className="quote-icon">“</div>
-                                    <p className="italic text-foreground/80 mb-6">{testimonial.quote}</p>
-                                </div>
-                                <div className="mt-auto">
-                                    <Separator className="my-4 bg-border/40" />
-                                    <p className="font-bold text-foreground">{testimonial.client}</p>
-                                    {testimonial.projectUrl && (
-                                        <Link href={testimonial.projectUrl} className="text-sm text-primary hover:underline mt-2 inline-block">
-                                            View Project →
-                                        </Link>
-                                    )}
-                                </div>
-                            </Card>
+                            <SpotlightCard spotlightColor="rgba(255, 69, 0, 0.15)" className="h-full">
+                                <Card className="p-8 h-full flex flex-col justify-between text-left bg-transparent border-none transition-all duration-300">
+                                    <div>
+                                        <div className="quote-icon">“</div>
+                                        <p className="italic text-foreground/80 mb-6">{testimonial.quote}</p>
+                                    </div>
+                                    <div className="mt-auto">
+                                        <Separator className="my-4 bg-border/40" />
+                                        <p className="font-bold text-foreground">{testimonial.client}</p>
+                                        {testimonial.projectUrl && (
+                                            <Link href={testimonial.projectUrl} className="text-sm text-primary hover:underline mt-2 inline-block">
+                                                View Project →
+                                            </Link>
+                                        )}
+                                    </div>
+                                </Card>
+                            </SpotlightCard>
                         </AnimatedContent>
                     ))}
                 </div>
