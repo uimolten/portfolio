@@ -257,3 +257,11 @@
     -webkit-mask-size: 0    18px,0    18px,0    18px,auto
   }
 }
+
+.quote-icon {
+    font-family: serif;
+    font-size: 5rem;
+    line-height: 1;
+    color: hsl(var(--primary) / 0.1);
+    font-weight: 700;
+}

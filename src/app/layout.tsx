@@ -32,8 +32,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
+    url: "https://uimolten.com",
     title: "UIMolten | Roblox UI/UX Designer",
     description: "Expert Roblox UI/UX designer moltennn, crafting modern, intuitive, and high-quality digital experiences.",
+    siteName: "UIMolten",
   },
   twitter: {
     card: "summary_large_image",

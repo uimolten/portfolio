@@ -7,3 +7,9 @@ export interface Project {
   imageUrl: string;
   tags: string[];
 }
+
+export interface Testimonial {
+  quote: string;
+  client: string;
+  projectUrl?: string;
+}
