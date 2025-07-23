@@ -1,5 +1,3 @@
-"use client";
-
 import Header from "@/components/header";
 import HeroSection from "@/components/sections/hero";
 import FaqSection from "@/components/sections/faq";

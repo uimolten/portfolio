@@ -1,5 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import AnimatedContent from "@/components/animated-content";
+import BlurText from "../blur-text";
 
 const faqs = [
     {
@@ -20,13 +20,18 @@ const FaqSection = () => {
     return (
         <section id="faq" className="py-20 sm:py-24 bg-card/20">
             <div className="container mx-auto">
-                <AnimatedContent>
-                    <h2 className="text-3xl font-bold font-headline text-center sm:text-4xl">Frequently Asked Questions</h2>
-                    <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-                        Have questions? Here are some of the most common ones I receive.
-                    </p>
-                </AnimatedContent>
-                <AnimatedContent className="mt-12 max-w-3xl mx-auto">
+                <div className="text-center">
+                    <BlurText
+                        text="Frequently Asked Questions"
+                        className="text-3xl font-bold font-headline sm:text-4xl"
+                    />
+                    <BlurText
+                        text="Have questions? Here are some of the most common ones I receive."
+                        className="mt-4 text-muted-foreground max-w-2xl mx-auto"
+                        delay={25}
+                    />
+                </div>
+                <div className="mt-12 max-w-3xl mx-auto">
                     <Accordion type="single" collapsible className="w-full">
                         {faqs.map((faq, index) => (
                             <AccordionItem key={index} value={`item-${index}`}>
@@ -37,7 +42,7 @@ const FaqSection = () => {
                             </AccordionItem>
                         ))}
                     </Accordion>
-                </AnimatedContent>
+                </div>
             </div>
         </section>
     );
