@@ -18,12 +18,12 @@ const projects: Project[] = [
   },
   {
     id: 10,
-    title: "Awakening Gauge - Upgrade Panel",
-    category: "RPG UI",
-    description: "A sleek, detailed panel for item and skill upgrades in a fantasy game.",
-    longDescription: "This component provides players with all the necessary information for a skill upgrade. It features a detailed description, cost breakdown for multiple items, and a clear title, all presented in a clean, modern layout that fits seamlessly into a fantasy theme.",
-    imageUrl: "/magic-origins-awakening.png",
-    tags: ["Roblox", "UI", "RPG", "Modern", "Fantasy"],
+    title: "Fantasy RPG - Settings Menu",
+    category: "game settings",
+    description: "A dark fantasy-themed settings menu with detailed, descriptive panels.",
+    longDescription: "This is a comprehensive settings interface designed for a fantasy RPG. It features distinct categories like Game, Graphics, and Keyboard settings, each with its own panel that provides detailed descriptions for the selected option. The sharp, angular design and fiery orange highlights create an immersive, thematic experience for the player.",
+    imageUrl: "/fantasy-rpg-settings.png",
+    tags: ["Roblox", "UI/UX", "RPG", "Settings", "Fantasy"],
   },
   {
     id: 9,
