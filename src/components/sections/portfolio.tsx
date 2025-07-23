@@ -7,32 +7,33 @@ import AnimatedContent from "@/components/animated-content";
 import type { Project } from "@/types";
 
 const projects: Project[] = [
+
   {
     id: 11,
-    title: "Magic Origins - Skill Tree",
+    title: "Fantasy RPG - Options Menu",
     category: "RPG fantasy",
-    description: "An immersive skill tree interface for a fantasy RPG, featuring glowing, dynamic paths.",
-    longDescription: "This UI allows players to visualize and unlock new abilities through an interactive skill tree. The design uses vibrant, glowing lines and fantasy-themed icons to create an engaging progression system. It includes detailed descriptions for each node, costs, and a clear path for character development.",
-    imageUrl: "/magic-origins-skill-tree.png",
-    tags: ["Roblox", "UI/UX", "RPG", "Skill Tree", "Fantasy"],
-  },
-  {
-    id: 10,
-    title: "Fantasy RPG - Settings Menu",
-    category: "game settings",
-    description: "A dark fantasy-themed settings menu with detailed, descriptive panels.",
-    longDescription: "This is a comprehensive settings interface designed for a fantasy RPG. It features distinct categories like Game, Graphics, and Keyboard settings, each with its own panel that provides detailed descriptions for the selected option. The sharp, angular design and fiery orange highlights create an immersive, thematic experience for the player.",
+    description: "A dark fantasy-themed options menu with detailed, descriptive panels.",
+    longDescription: "This is a comprehensive options interface designed for a fantasy RPG. It features distinct categories like Game, Graphics, and Keyboard settings, each with its own panel that provides detailed descriptions for the selected option. The sharp, angular design and fiery orange highlights create an immersive, thematic experience for the player.",
     imageUrl: "/fantasy-rpg-settings.png",
     tags: ["Roblox", "UI/UX", "RPG", "Settings", "Fantasy"],
   },
   {
-    id: 9,
+    id: 10,
     title: "Fantasy RPG - Inventory & Crafting",
     category: "RPG inventory",
     description: "A detailed inventory and crafting screen for a fantasy RPG, showing item details and required materials.",
     longDescription: "This interface provides a comprehensive view of the player's inventory, separated into categories like 'Consumables' and 'Other Items'. When an item is selected, its details, description, and crafting requirements are displayed clearly on the right. The dark, thematic design with orange highlights maintains a consistent fantasy aesthetic.",
     imageUrl: "/fantasy-rpg-inventory.png",
     tags: ["Roblox", "UI/UX", "RPG", "Inventory", "Crafting"],
+  },
+  {
+    id: 9,
+    title: "Fantasy RPG - Skill Tree",
+    category: "RPG fantasy",
+    description: "An immersive skill tree interface for a fantasy RPG, featuring glowing, dynamic paths.",
+    longDescription: "This UI allows players to visualize and unlock new abilities through an interactive skill tree. The design uses vibrant, glowing lines and fantasy-themed icons to create an engaging progression system. It includes detailed descriptions for each node, costs, and a clear path for character development.",
+    imageUrl: "/magic-origins-skill-tree.png",
+    tags: ["Roblox", "UI/UX", "RPG", "Skill Tree", "Fantasy"],
   },
   {
     id: 8,
