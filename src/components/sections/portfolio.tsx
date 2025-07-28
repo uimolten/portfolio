@@ -7,7 +7,15 @@ import AnimatedContent from "@/components/animated-content";
 import type { Project } from "@/types";
 
 const projects: Project[] = [
-
+  {
+    id: 12,
+    title: "Fantasy RPG - Character Creator",
+    category: "RPG character creation",
+    description: "A detailed character creation screen with multiple customization options.",
+    longDescription: "This UI provides a deep and immersive character creation experience for a fantasy RPG. Players can navigate through Attributes, Character, and Abilities tabs to define their hero. The design features ornate, thematic frames for each customization category, such as abilities, hair, and body type, ensuring the interface feels cohesive with the game's fantasy world.",
+    imageUrl: "/fantasy-rpg-character-creator.png",
+    tags: ["Roblox", "UI/UX", "RPG", "Character Creator", "Fantasy"],
+  },
   {
     id: 11,
     title: "Fantasy RPG - Options Menu",
