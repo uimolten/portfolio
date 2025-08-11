@@ -9,7 +9,7 @@ import type { Project } from "@/types";
 const projects: Project[] = [
   {
     id: 13,
-    title: "Fantasy RPG - Complete HUD",
+    title: "RPG - Complete HUD",
     category: "RPG HUD",
     description: "A complete HUD with health/mana bars, inventory, leaderboard, and hotbar.",
     longDescription: "This comprehensive UI provides players with all essential information at a glance. It features a prominent health and mana bar, a detailed inventory grid, a competitive leaderboard, and a quick-access hotbar. The design uses sharp, metallic frames and a dark, immersive theme to fit within a classic fantasy RPG setting.",
